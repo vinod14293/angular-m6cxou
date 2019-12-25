@@ -1,0 +1,37 @@
+<nav class="navbar navbar-light"
+	style="background-color: #0cbaba; background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);"
+	id="title-nav">
+	<a class="navbar-brand" href="#"
+		style="margin-left : 20px ; color : white; font-size : 30px "><i class="fa fa-edit" style="font-size : 30px; color : #00FFEF ; margin-right : 10px;"></i>ACTIVITY
+		TRACKER</a>
+	<form class="form-inline">
+		<!--<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+		<button routerLink="/login" class="btn btn-outline-warning my-2 my-sm-0" type="submit" style="margin-right : 20px ;">Login</button>
+	</form>
+</nav>
+
+<div class="container" style="width : 80%; margin-top : 50px">
+	<form [formGroup]="signUpForm" (ngSubmit)="signUp()">
+    <div class="form-group">
+			<label for="enterName"><b>Name</b></label>
+			<input type="text" class="form-control" id="enterName" formControlName="name" aria-describedby="emailHelp" placeholder="Enter Name">
+  </div>
+		<div class="form-group">
+			<label for="exampleInputEmail1"><b>Email address</b></label>
+			<input type="email" class="form-control" formControlName="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+			<label for="enterID"><b>Employ ID</b></label>
+			<input type="text" formControlName="employId" class="form-control" id="enterID" aria-describedby="emailHelp" placeholder="Enter Employ ID">
+  </div>
+			<div class="form-group">
+				<label for="exampleInputPassword1"><b>Password</b></label>
+				<input type="password" class="form-control" formControlName="password" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group">
+				<label for="EnterCNFPWD"><b>Confirm Password</b></label>
+				<input type="password" formControlName="confirmPWD" class="form-control" id="EnterCNFPWD" placeholder="Confirm Password">
+  </div>
+				<button type="submit" class="btn btn-success btn-block" style="margin-top : 30px">Submit</button>
+	</form>
+</div>
